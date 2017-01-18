@@ -20,6 +20,17 @@ public class CreateFrame extends JFrame
 	
 	private void setupFrame()
 	{
-		
+		super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		super.setSize(1000, 850);
+		super.setMinimumSize(new Dimension(650, 520));
+		super.setTitle("Password Strength");
+		super.setLocationRelativeTo(null);
+		super.setContentPane(panel);
+		super.setVisible(true);
+	}
+	
+	public CreatePanel getPanel()
+	{
+		return this.panel;
 	}
 }
