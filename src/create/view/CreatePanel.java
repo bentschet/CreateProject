@@ -7,6 +7,8 @@ import java.awt.Dimension;
 import java.awt.event.*;
 import java.awt.event.MouseMotionListener;
 
+//Ayy lmao i made a basic gui copied from chatbot
+
 public class CreatePanel extends JPanel
 {
 	private CreateController baseController;
@@ -14,6 +16,9 @@ public class CreatePanel extends JPanel
 	private JButton checkButton;
 	private JTextField passwordField;
 	private JLabel promptLabel;
+	
+	// This is an amazing Panel. Great work!
+	//^ +1
 	
 	public CreatePanel(CreateController baseController)
 	{
@@ -24,6 +29,8 @@ public class CreatePanel extends JPanel
 		this.passwordField = new JTextField(20);
 		this.promptLabel = new JLabel("A simple evaluation of your password's strength against BFA.");
 	}
+	
+	// I think you need to add some calls for the method but you seem to have what you need.
 	
 	private void setupPanel()
 	{
