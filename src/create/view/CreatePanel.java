@@ -13,14 +13,16 @@ public class CreatePanel extends JPanel
 	private SpringLayout baseLayout;
 	private JButton checkButton;
 	private JTextField passwordField;
+	private JLabel promptLabel;
 	
 	public CreatePanel(CreateController baseController)
 	{
 		super();
 		this.baseController = baseController;
 		this.baseLayout = new SpringLayout();
-		this.checkButton = new JButton("Check password strength!");
+		this.checkButton = new JButton("Check password strength.");
 		this.passwordField = new JTextField(20);
+		this.promptLabel = new JLabel("A simple evaluation of your password's strength against BFA.");
 	}
 	
 	private void setupPanel()
