@@ -5,19 +5,65 @@ import java.util.regex.Pattern;
 
 public class CreateController 
 {
-	private String LowercasePattern = "(?=.*[a-z])";
-	private String DigitPattern = "(?=.*d)";
-	private String SpecialCharPattern = "(?=.*[@#$%])";
-	private String UppercasePattern = "((?=.*[A-Z])";
+	private static Pattern LowercasePattern = Pattern.compile("(?=.*[a-z])");
+	private static Pattern DigitPattern = Pattern.compile("(?=.*d)");
+	private static Pattern SpecialCharPattern = Pattern.compile("(?=.*[@#$%])");
+	private static Pattern UppercasePattern = Pattern.compile("((?=.*[A-Z])");
+	private static Pattern CompletePattern = Pattern.compile("((?=.*[a-z])(?=.*d)(?=.*[@#$%])(?=.*[A-Z]))");
 	
 	public void start() 
 	{
-				
+		
 	}
 	
-	public void checkLowercase()
+	public static boolean checkLowercase(String password)
 	{
-		
+		Matcher mtch = LowercasePattern.matcher(password);
+		if(mtch.matches())
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	public static boolean checkDigitPattern(String password)
+	{
+		Matcher mtch = DigitPattern.matcher(password);
+		if(mtch.matches())
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	public static boolean checkSpecialChar(String password)
+	{
+		Matcher mtch = SpecialCharPattern.matcher(password);
+		if(mtch.matches())
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	public static boolean checkUppercase(String password)
+	{
+		Matcher mtch = UppercasePattern.matcher(password);
+		if(mtch.matches())
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	public static boolean checkAll(String password)
+	{
+		Matcher mtch = CompletePattern.matcher(password);
+		if(mtch.matches())
+		{
+			return true;
+		}
+		return false;
 	}
 
 }
