@@ -33,4 +33,6 @@ public class CreateFrame extends JFrame
 	{
 		return this.panel;
 	}
+
+	
 }

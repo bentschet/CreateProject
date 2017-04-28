@@ -3,6 +3,10 @@ package create.controller;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import create.view.CreatePanel;
+import create.view.CreateFrame;
+
+
 public class CreateController 
 {
 	private static Pattern LowercasePattern = Pattern.compile("(?=.*[a-z])");
@@ -13,7 +17,7 @@ public class CreateController
 	
 	public void start() 
 	{
-		
+		CreateFrame.getPanel().showMessage("Let's test that password of yours.");
 	}
 	
 	public static boolean checkLowercase(String password)
