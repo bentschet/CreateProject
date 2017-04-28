@@ -49,4 +49,9 @@ public class CreatePanel extends JPanel
 					}
 				});
 	}
+
+	public void showMessage(String string) 
+	{
+			
+	}
 }
